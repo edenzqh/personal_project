@@ -1,0 +1,15 @@
+require("RColorBrewer")
+amount = c(419.9,58.64,151.1,492.62,175.84,369.59,75,297.07)
+category = c("food","uber","shopping","grocery","entertainment","electronics","revenues","education")
+pct = round(amount/sum(amount)*100)
+labels=paste(category,"-",pct,"%",sep = "")
+pie(amount, labels, main = "Distribution of The Total Spending",col = rainbow(8))
+
+library(tidyverse)
+Personal_Spending_Jan_
+ggplot(data = Personal_Spending_Jan_, 
+       mapping = aes(x = Date,
+                     y = total_of_the_day))+
+  geom_point(size = 1)+
+  geom_line(color = "black")+
+  labs(title = "Trend of The Daily Spending")
